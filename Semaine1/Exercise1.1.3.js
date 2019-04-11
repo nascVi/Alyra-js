@@ -1,58 +1,60 @@
-// init function
-function init() {
-    document.getElementById('feedbackText').textContent = "Est ou n'est pas un palindrôme...";
+// Initial state function 
+const notifState = () => {
+    document.getElementById('stateMess').textContent = "Est ou n'est pas un palindrôme..."
 }
 
 
-function trim(str) {
-    var newStr = "";
+const trim = (str) => {
+    let entStr = ""
 
     try {
-        // white space removal
+    // 32 chars get replaced by an empty string for a no white space return
         for (var i = 0; i < str.length; i++) {
-            newStr += str.charCodeAt(i) != 32 ? str.charAt(i) : "";
+            entStr += str.charCodeAt(i) != 32 ? str.charAt(i) : ""
         }
-        return newStr;
+        return entStr
+        
     }
     catch (err) {
-        document.getElementById('feedbackText').textContent =  "Erreur : " + err.message;
-        return;
+        document.getElementById('stateMess').textContent =  "Erreur : " + err.message
+        return
     }
 }
 
-function testPalindrome(str) {
+
+const palChecker = (str) => {
     try {
-        // i will scroll half of the sentence
-        var scroll = Math.floor(str.length/2); // rounding down for dealing with odd size text
-        for (var i = 0; i < scroll; i++) {
-            if (str.charCodeAt(i) != str.charCodeAt(str.length - i -1)) return false;
+        // Handle non typical size entries
+        const cicl = Math.floor(str.length/2)
+        for (let i = 0; i < cicl; i++) {
+            if (str.charCodeAt(i) != str.charCodeAt(str.length - i -1)) return false
         }
-        return true; // palidrome
+        // is a palindrome
+        return true
     }
     catch (err) {
-        document.getElementById('feedbackText').textContent =  "Erreur : " + err.message;
+        document.getElementById('stateMess').textContent =  "Erreur : " + err.message
     }
-    return false;
+    return false
 }
 
-function isItAPalindrome() {
+const estPalindrome = () => {
 
-    // init
-    var str = laForm.aText.value;
+    let str = fiche.entUser.value
 
-    // check input
+    // No entry case
     if (str.length == 0) {
-        document.getElementById('feedbackText').textContent = "Vous n'avez rien saisi dans le champ texte !";
+        document.getElementById('stateMess').textContent = "Vous n'avez rien saisi dans le champ texte !";
         return;
     }
 
-    // trim all white spaces
+    // trim function call
     str = trim(str);
 
-    if (testPalindrome(str)) {
-        document.getElementById('feedbackText').textContent =  "C'est un palindrome !";
+    if (palChecker(str)) {
+        document.getElementById('stateMess').textContent =  "C'est un palindrome !";
     }
     else {
-        document.getElementById('feedbackText').textContent =  "Ce n'est pas un palindrome ...";
+        document.getElementById('stateMess').textContent =  "Ce n'est pas un palindrome ...";
     }
 }
