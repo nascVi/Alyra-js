@@ -1,3 +1,4 @@
+
 // Initial state function 
 const notifState = () => {
     document.getElementById('stateMess').textContent = "Est ou n'est pas un palindrôme..."
@@ -45,17 +46,17 @@ const estPalindrome = () => {
 
     // No entry case
     if (str.length == 0) {
-        document.getElementById('stateMess').textContent = "Vous n'avez rien saisi dans le champ texte !";
-        return;
+        document.getElementById('stateMess').textContent = "Vous n'avez rien entré !"
+        return
     }
 
     // trim function call
     str = trim(str);
 
     if (palChecker(str)) {
-        document.getElementById('stateMess').textContent =  "C'est un palindrome !";
+        document.getElementById('stateMess').textContent =  str + " Est palindrome !"
     }
     else {
-        document.getElementById('stateMess').textContent =  "Ce n'est pas un palindrome ...";
+        document.getElementById('stateMess').textContent =  str + " N'est pas palindrome ..."
     }
 }
