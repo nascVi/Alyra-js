@@ -40,7 +40,7 @@ const palChecker = (str) => {
 
 const estPalindrome = () => {
 
-    let str = fiche.entUser.value
+    let str = dynFiche.entUser.value
 
     // No entry case
     if (str.length == 0) {
