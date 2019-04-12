@@ -11,6 +11,7 @@ const trim = (str) => {
     // 32 chars get replaced by an empty string for a no white space return
         for (var i = 0; i < str.length; i++) {
             entStr += str.charCodeAt(i) != 32 ? str.charAt(i) : ""
+            entStr = entStr.toLowerCase()
         }
         return entStr
         
