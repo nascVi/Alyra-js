@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>jsAlyra - 1.2.1</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="Exercice1.2.1.css"></link> 
+
+</head>
+
+<body onload="notifState()">
+    <h2>Exercice 1.2.1: Calculer la factorielle d'un nombre (Javascript)</h2>
+    <div>
+        <div>
+            <h3>Cette API vous permet de connaitre rapidement la factorielle du nombre de votre choix, et les opération nécessaire pour l'obtenir.</h3>
+        </div>
+        <div>
+            <form name="dynFiche" action="javascript:factorialRen()">
+                Votre Entier Naturel: <input id="numUser" type="text"/>
+                <button type="submit" class="btn btn-dark">Calcule</button>
+                <h3 id="stateMess"></h3>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="Exercice1.2.1.js"></script>
+
+</html>
