@@ -50,7 +50,7 @@ const exhausRen = () => {
     startTSRen()
 
     let c = ""
-    for (i=0 ; i<trCase.length ; i++ ) { c += i + ""; }
+    for (i=0 ; i<trCase.length ; i++ ) { c += i + "" }
     
     let mixMatch = matchTr(Array.from(c.split('')))
     for (s of mixMatch) satoshisSum(s)
@@ -66,38 +66,38 @@ const exhausRen = () => {
 }
 
 
-function matchTr(a) { 
+const matchTr = (a) => { 
     let f = function(n, source, en_cours, total) {
         if (n == 0) {
             if (en_cours.length > 0) {
-                total[total.length] = en_cours;
+                total[total.length] = en_cours
             }
-            return;
+            return
         }
 
         for (let j = 0; j < source.length; j++) {
-            f(n - 1, source.slice(j + 1), en_cours.concat([source[j]]), total);
+            f(n - 1, source.slice(j + 1), en_cours.concat([source[j]]), total)
         }
-        return;
+        return
     }
 
-    let t = [];
+    let t = []
     for (let i=0; i < a.length; i++) {
-        f(i, a, [], t);
+        f(i, a, [], t)
     }
 
-    t.push(a);
-    return t;
+    t.push(a)
+    return t
 }   
 
 // cumul les satochis des trCase dans l'ordre ou elles arrivent, sans dépasser max block size
-function satoshisSum(ts) {
+const satoshisSum = (ts) => {
     
     // uiState
-    let tipsAmount = 0;
-    let bitsAmount = 0;
-    let trOut = new Array();
-    let cTr = 0;
+    let tipsAmount = 0
+    let bitsAmount = 0
+    let trOut = new Array()
+    let cTr = 0
 
     // Each transaction
     for (i=0 ; i < ts.length ; i++)  {
@@ -109,7 +109,7 @@ function satoshisSum(ts) {
             cTr++
             trOut.push(trCase[x])
         } else {
-            break;
+            break
         }
     }
 
@@ -121,7 +121,7 @@ function satoshisSum(ts) {
 
 }
 
-let dsRendr = "";
+let dsRendr = ""
 const rendr = (txt) => {
     console.log(txt)
     dsRendr += "\n" + txt
