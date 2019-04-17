@@ -61,7 +61,7 @@ const exhausRen = () => {
         rendr(" trCase(" + i + ") : " + bestTr[i])
         bitsSum += bestTr[i][0]
     }
-    rendr("\n Le meilleur pourboire à " + bestTip + " satoshis, est obtenu avec un cumule de " + bestTr.length + " transactions, pour un block de "  + bitsSum + " octets.")
+    rendr("\n Le meilleurs pourboire à " + bestTip + " satoshis, est obtenu avec un cumule de " + bestTr.length + " transactions, pour un block de "  + bitsSum + " octets.")
     endTSRen()
 }
 
