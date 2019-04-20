@@ -16,7 +16,7 @@ function factorialCal(num) {
 }
 
 
-factorialCal.prototype.calculer = function() {
+factorialCal.prototype.calc = function() {
     if (this.a != null) {
         try {
 
@@ -40,7 +40,7 @@ factorialCal.prototype.calculer = function() {
 const factorialRen = () => {
     try {
         let f = new factorialCal(dynFiche.numUser.value);
-        document.getElementById('stateMess').textContent =  "La factorielle est: " + f.calculer() ;
+        document.getElementById('stateMess').textContent =  "La factorielle est: " + f.calc() ;
     } catch (err) {
         // Handle the none entry case
         document.getElementById('stateMess').textContent = err;
