@@ -28,7 +28,7 @@ const uiState = () => {
 }
 
 
-// Timer
+// Time tool
 let startTStp, endTStp
 const startTSRen = () => {
     startTStp = new Date()
@@ -49,10 +49,10 @@ const exhausRen = () => {
     rendr("\n")
     startTSRen()
 
-    let c = ""
-    for (i=0 ; i<trCase.length ; i++ ) { c += i + "" }
+    let ctr = ""
+    for (i=0 ; i<trCase.length ; i++ ) { ctr += i + "" }
     
-    let mixMatch = matchTr(Array.from(c.split('')))
+    let mixMatch = matchTr(Array.from(ctr.split('')))
     for (s of mixMatch) satoshisSum(s)
 
     rendr(mixMatch.length + " Estimations: ")
@@ -90,7 +90,7 @@ const matchTr = (a) => {
     return t
 }   
 
-// cumul les satochis des trCase dans l'ordre ou elles arrivent, sans dépasser max block size
+// cumul les satochis des trCase dans l'ordre, jusqu'à la limite du block
 const satoshisSum = (ts) => {
     
     // uiState
@@ -126,4 +126,5 @@ const rendr = (txt) => {
     console.log(txt)
     dsRendr += "\n" + txt
 }
+
 
