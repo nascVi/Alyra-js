@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>jsAlyra - 1.2.3</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="Exercice1.2.3.css"></link> 
+
+</head>
+
+<body onload="uiState()">
+    <h2>Exercices Optionnels : Ecrire un algorithme</h2>
+    <div>
+        <div>
+            <h3>Cet interface est le rendu de l'algorithme récursif pour le calcule d'une factorielle(ctrl + maj + i pour vue sur les opérations)</h3>
+        </div>
+        <div>
+            <form name="dynFiche" action="javascript:factorialRen()">
+                Votre Entier Naturel: <input id="numUser" type="text"/>
+                <button type="submit" class="btn btn-dark">Algo Run</button>
+                <h3 id="stateMess"></h3>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="Exercice1.2.3.js"></script>
+
+</html>
