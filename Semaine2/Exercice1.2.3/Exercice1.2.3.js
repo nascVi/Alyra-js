@@ -1,5 +1,4 @@
 
-
 // initial state function
 const uiState = () => {
     document.getElementById('stateMess').textContent = "Calculez votre factorielle ..."

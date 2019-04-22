@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>jsAlyra - 1.2.4</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional Theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="Exercice1.2.4.css"></link> 
+
+</head>
+
+<body>
+    <h2>Exercices Optionnels : Ecrire un algorithme</h2>
+    <div>
+        <div>
+            <h3>Créer un Algorithm - Exercice 1.2.4</h3>
+        </div>
+        <div>
+            <p>
+            
+            <span>Source: <a href="https://www.unige.ch/math/mgene/cours/slides3.pdf">Analyse Combinatoire</a></span>
+            <br>
+            On considère ici les 4 devises:
+            Doge, Lightcoin(LTC), Ethereum(ETH), et Bitcoin(BTC).
+            <br>
+            La méthode de permutation, implique, dans le cas de l'analyse des arrangements, pour vérification de gain probable, suite à un échange ordonnées entre ces valeurs, 2 à 4 combinaisons.
+            <br>
+            </p>
+            <br>
+                    <h3>(Doge, LTC, ETH, BTC)</h3>
+
+            <br>
+
+            <p>            
+            Je mets en application ici, avec les alias E(ETH), L(LTC), B(BTC), D(Doge).
+            <br>
+            n = 4, soit les 4 choix de crypto.
+            k = 2 à 4, soit le nombre de changes possibles(Une opération de change ne peut être réitéré).
+            <br>
+            Soit la formule de permutation pour le nombre d'arrangements A:
+            A(n,k) = n! / ((n-k)!)
+            <br>
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+            <br>
+            DLD, LDL, DED... ou n=4 et k=2
+            Pour A(4,2) = n! / ((n-k)), on a 12 arrangements
+            <br>
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+            <br>
+            DLED, DELD... ou n=4 et k=3
+            Pour A(4,3) = n! / ((n-k)), 24 arrangements
+            <br>
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+            <br>
+            DLEBD... ou n=4 et k=4
+            Pour A(4,4) = n! / ((n-k)), on trouve 24 arrangements
+            <br>
+            |||||||||||||||||||||||||||||||||||||||||||||||||
+            <br>
+            <span style="color: green">Il y a donc 60 arrangements, soit la somme du résultat, des 3 différentes expressions.
+            On obtien pour chacun le booléen gain ou !gain.</span>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="Exercice1.2.4.js">Non codded yet</script>
+
+</html>
+
