@@ -11,7 +11,7 @@ const factoriel = (n) => {
         result *= i
     }
     if(n < 0) {
-        result = console.log(n +" isn'a prime integer!")
+        result = console.log(n +" isn'a prime!")
     }
 
     console.log("Factorielle de "+n+" = " + result)
