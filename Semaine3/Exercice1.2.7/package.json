@@ -1,0 +1,27 @@
+{
+  "name": "htable",
+  "version": "1.0.0",
+  "description": "Exercice Alyra cryptos experts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nascVi/Alyra-js.git"
+  },
+  "keywords": [
+    "js",
+    "crypto",
+    "courses"
+  ],
+  "author": "nv for lpc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nascVi/Alyra-js/issues"
+  },
+  "homepage": "https://github.com/nascVi/Alyra-js#readme",
+  "dependencies": {
+    "sjcl": "^1.0.8"
+  }
+}
